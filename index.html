@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krystina's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    This is Krystina's portfolio website.
+
+  <div class="portfolio-container">
+    
+    <nav class="top-nav">
+      <a href="#" class="nav-link">HOME</a>
+      <span class="nav-domain">KRYSFOLIO.COM</span>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <header class="main-hero">
+      <h1 class="hero-title">KRYSTINA'S<br>PORTFOLIO</h1>
+    </header>
+
+    <hr class="divider">
+
+    <section class="profile-section">
+      <h2 class="sub-heading">VISUAL DESIGNER & ANIMATOR</h2>
+      <p class="profile-text">
+        Hi, I'm Krystina.<br>
+        I am a Visual Designer and animator dedicated to turning brilliant ideas into reality through systematic visuals and dynamic motion. With three years of professional experience in the creative industry, I have collaborated with diverse brands and institutions: VinUniversity, VIVO Vietnam, Animow Animation Studio, Queenscliff Historical Museum, and more.
+      </p>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2 class="sub-heading">CONTACT ME:</h2>
+      <div class="contact-grid">
+        <div class="contact-label">EMAIL:</div>
+        <div class="contact-value"><a href="mailto:krystina@krysfolio.com">krystina@krysfolio.com</a></div>
+
+        <div class="contact-label">LINKEDIN:</div>
+        <div class="contact-value"><a href="https://www.linkedin.com/in/krystina-tram-anh-le-nguyen-72aa1a248/" target="_blank">https://www.linkedin.com/in/krystina-tram-anh-le-nguyen-72aa1a248/</a></div>
+
+        <div class="contact-label">PHONE:</div>
+        <div class="contact-value">+61 450 457 690</div>
+
+        <div class="contact-label">INSTAGRAM:</div>
+        <div class="contact-value"><a href="https://instagram.com/krys_folio" target="_blank">@krys_folio</a></div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap">
+      <div class="ticker-item">PORTFOLIO</div>
+      <div class="ticker-item">PORTFOLIO</div>
+      <div class="ticker-item">PORTFOLIO</div>
+    </div>
+
+    <article class="project-article">
+      <div class="project-header">
+        <h3 class="project-title">ALFRED DEAKIN ANIMATION PROJECT</h3>
+        <span class="project-date">NOV/2025 - MAY/2026</span>
+      </div>
+      <p class="project-description">
+        Created for the Queenscliff Historical Museum, this educational animation brings local history to life for a younger audience. I was tasked with making historical content engaging for children, which comes with a unique design challenge: it had to be entirely silent to suit the museum's custom peephole installations. Storyboard written by Felicity Rousseaux.
+      </p>
+
+      <div class="media-block">
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/OgM4yxj-8_4?si=yf59N9xJAiLDhalK" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+      </div>
+
+      <div class="media-block">
+        <span class="media-caption">Alfred Deakin Character Design</span>
+        <div class="image-wrapper">
+          <img src="assets/char-sheet.jpeg"Alfred Deakin Character Design">
+        </div>
+      </div>
+
+      <div class="media-block">
+        <span class="media-caption">Storyboard</span>
+        <div class="image-wrapper">
+          <img src="assets/storyboard-01.jpeg" alt="Storyboard Main">
+        </div>
+      </div>
+
+      <div class="storyboard-subgrid">
+        <div class="image-wrapper">
+          <img src="assets/storyboard-02.jpeg" alt="Storyboard Sketch 1">
+        </div>
+        <div class="image-wrapper">
+          <img src="assets/storyboard-03.jpeg" alt="Storyboard Sketch 2">
+        </div>
+      </div>
+    </article>
+
+  </div>
+
 </body>
 </html>
