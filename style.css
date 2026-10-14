@@ -1,8 +1,15 @@
-/* RESET TIÊU CHUẨN */
+/* --- Quy chuẩn hệ thống --- */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #232122;     /* Màu nền xám đen đặc trưng của ảnh */
+  --primary-green: #1eb39b; /* Màu xanh ngọc chuẩn */
+  --text-white: #ffffff;
+  --text-cream: #f4f1ea;
 }
 
 html {
@@ -10,213 +17,270 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.5;
-  padding: 20px 15px;
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 100px;
 }
 
-/* KHUNG GIỚI HẠN DIỆN TÍCH HIỂN THỊ */
-.portfolio-container {
-  max-width: 800px;
+/* --- 1. NAVBAR STYLE --- */
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-/* 1. THANH MENU (TOP NAV) */
-.top-nav {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
-  font-size: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Oswald', sans-serif;
+  color: var(--primary-green);
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
-.top-nav a {
-  color: #ffffff;
+.nav-links a {
+  font-family: 'Oswald', sans-serif;
+  color: var(--text-cream);
   text-decoration: none;
-  font-weight: 600;
+  margin-left: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
 }
 
-.nav-domain {
-  font-weight: 600;
+.nav-links a:hover {
+  color: var(--primary-green);
 }
 
-/* 2. TIÊU ĐỀ LỚN (HERO TITLE) */
-.main-hero {
-  padding: 60px 0;
-  text-align: center;
+/* --- TỔNG THỂ LAYOUT CHÍNH --- */
+.main-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.hero-title {
-  font-size: 4.5rem;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -1px;
-  text-transform: uppercase;
+/* --- 2. HERO SECTION --- */
+.hero-section {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ĐƯỜNG KẺ NGANG */
-.divider {
-  border: none;
-  border-top: 1px solid #ffffff;
-  margin-bottom: 40px;
-}
-
-/* 3. CÁC TIÊU ĐỀ MỤC NHỎ */
-.sub-heading {
-  font-size: 1rem;
+.sub-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+  color: var(--text-white);
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
-/* KHỐI GIỚI THIỆU VÀ LIÊN HỆ */
-.profile-section, .contact-section {
-  margin-bottom: 45px;
-}
-
-.profile-text {
-  font-size: 0.9rem;
-  color: #cccccc;
-  max-width: 750px;
-  text-align: justify;
-}
-
-/* LƯỚI THÔNG TIN LIÊN HỆ */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 10px 0;
-  font-size: 0.85rem;
-}
-
-.contact-label {
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.contact-value a {
-  color: #cccccc;
-  text-decoration: underline;
-  word-break: break-all;
-}
-
-/* 5. THANH CHỮ CHẠY (PORTFOLIO TICKER) */
-.ticker-wrap {
+.brand-container {
   display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  padding: 15px 0;
-  margin: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 40px;
 }
 
-.ticker-item {
-  font-size: 1.3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* 6. CHI TIẾT DỰ ÁN */
-.project-article {
-  margin-bottom: 60px;
-}
-
-.project-header {
+.row {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 15px;
+  align-items: center;
+  line-height: 0.82;
 }
 
-.project-title {
-  font-size: 1.05rem;
-  font-weight: 700;
+.row-top {
+  font-family: 'Oswald', sans-serif;
+  font-size: 190px;
+  color: var(--primary-green);
 }
 
-.project-date {
-  font-size: 0.8rem;
-  color: #888888;
+.row-bottom {
+  font-family: 'Oswald', sans-serif;
+  font-size: 190px;
+  margin-top: 30px;
 }
 
-.project-description {
-  font-size: 0.9rem;
-  color: #cccccc;
-  margin-bottom: 30px;
-  text-align: justify;
+.letter { display: inline-block; }
+.txt-green { color: var(--primary-green); }
+
+.letter-l {
+  transform: skewX(-10deg);
+  margin-left: -30px;
+  margin-right: -30px;
+  z-index: 10;
 }
 
-/* KHỐI CHỨA PHƯƠNG TIỆN (VIDEO/ẢNH) */
-.media-block {
-  margin-bottom: 35px;
-}
-
-.media-caption {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.image-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* KHUNG EMUBED VIDEO TỶ LỆ 16:9 */
-.video-wrapper {
+/* KHÔNG GIAN MẮT TƯƠNG TÁC CHUỘT */
+.eye {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+  width: 155px;
+  height: 155px;
+  background-color: var(--text-cream);
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 5;
 }
 
-.video-wrapper iframe {
+.pupil {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90px;
+  height: 90px;
+  background-color: #23252b;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.06s ease-in-out;
 }
 
-/* LƯỚI HAI ẢNH PHÁC THẢO DƯỚI CÙNG */
-.storyboard-subgrid {
+.pupil::after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+}
+
+/* BUTTONS VIEW WORK & CV */
+.cta-buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #232122;
+  background-color: var(--text-cream);
+  text-decoration: none;
+  padding: 18px 32px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--primary-green);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- CẤU TRÚC CHUNG CÁC SECTION PHÍA DƯỚI --- */
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  color: var(--primary-green);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 60px;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* --- 3. ABOUT SECTION --- */
+.about-section {
+  padding: 60px 0;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-text p {
+  margin-bottom: 25px;
+}
+
+.txt-highlight {
+  color: var(--primary-green);
+}
+
+/* --- 4. PROJECTS SECTION --- */
+.projects-section {
+  padding: 60px 0;
+}
+
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 30px;
 }
 
-/* CẤU HÌNH ĐÁP ỨNG TRÊN MOBILE */
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .project-header {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 5px 0;
-  }
-  
-  .storyboard-subgrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .ticker-item:nth-child(3) {
-    display: none; /* Ẩn bớt 1 chữ portfolio trên màn hình quá nhỏ để tránh tràn dòng */
-  }
+.project-card {
+  background-color: var(--text-cream);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #232122;
+}
+
+.tag {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.year {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-media {
+  flex-grow: 1;
+  background-color: #ddd; /* Nền tạm khi chưa có ảnh */
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE CHO ĐIỆN THOẠI */
+@media (max-width: 768px) {
+  .row-top { font-size: 100px; }
+  .row-bottom { font-size: 90px; }
+  .eye { width: 85px; height: 85px; }
+  .pupil { width: 40px; height: 40px; }
+  .letter-l { margin-left: -15px; margin-right: -15px; }
+  .projects-grid { grid-template-columns: 1fr; }
 }

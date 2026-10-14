@@ -1,0 +1,222 @@
+/* RESET TIÊU CHUẨN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  padding: 20px 15px;
+}
+
+/* KHUNG GIỚI HẠN DIỆN TÍCH HIỂN THỊ */
+.portfolio-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 1. THANH MENU (TOP NAV) */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.top-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-domain {
+  font-weight: 600;
+}
+
+/* 2. TIÊU ĐỀ LỚN (HERO TITLE) */
+.main-hero {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+/* ĐƯỜNG KẺ NGANG */
+.divider {
+  border: none;
+  border-top: 1px solid #ffffff;
+  margin-bottom: 40px;
+}
+
+/* 3. CÁC TIÊU ĐỀ MỤC NHỎ */
+.sub-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* KHỐI GIỚI THIỆU VÀ LIÊN HỆ */
+.profile-section, .contact-section {
+  margin-bottom: 45px;
+}
+
+.profile-text {
+  font-size: 0.9rem;
+  color: #cccccc;
+  max-width: 750px;
+  text-align: justify;
+}
+
+/* LƯỚI THÔNG TIN LIÊN HỆ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px 0;
+  font-size: 0.85rem;
+}
+
+.contact-label {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.contact-value a {
+  color: #cccccc;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* 5. THANH CHỮ CHẠY (PORTFOLIO TICKER) */
+.ticker-wrap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 15px 0;
+  margin: 50px 0;
+}
+
+.ticker-item {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 6. CHI TIẾT DỰ ÁN */
+.project-article {
+  margin-bottom: 60px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.project-date {
+  font-size: 0.8rem;
+  color: #888888;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* KHỐI CHỨA PHƯƠNG TIỆN (VIDEO/ẢNH) */
+.media-block {
+  margin-bottom: 35px;
+}
+
+.media-caption {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* KHUNG EMUBED VIDEO TỶ LỆ 16:9 */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* LƯỚI HAI ẢNH PHÁC THẢO DƯỚI CÙNG */
+.storyboard-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* CẤU HÌNH ĐÁP ỨNG TRÊN MOBILE */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 5px 0;
+  }
+  
+  .storyboard-subgrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ticker-item:nth-child(3) {
+    display: none; /* Ẩn bớt 1 chữ portfolio trên màn hình quá nhỏ để tránh tràn dòng */
+  }
+}

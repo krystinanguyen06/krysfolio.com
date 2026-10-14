@@ -3,101 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krystina's Portfolio</title>
+  <title>Krystina | Visual Designer & Animator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="portfolio-container">
-    
-    <nav class="top-nav">
-      <a href="#" class="nav-link">HOME</a>
-      <span class="nav-domain">KRYSFOLIO.COM</span>
-      <a href="#contact" class="nav-link">CONTACT</a>
-    </nav>
-
-    <header class="main-hero">
-      <h1 class="hero-title">KRYSTINA'S<br>PORTFOLIO</h1>
-    </header>
-
-    <hr class="divider">
-
-    <section class="profile-section">
-      <h2 class="sub-heading">VISUAL DESIGNER & ANIMATOR</h2>
-      <p class="profile-text">
-        Hi, I'm Krystina.<br>
-        I am a Visual Designer and animator dedicated to turning brilliant ideas into reality through systematic visuals and dynamic motion. With three years of professional experience in the creative industry, I have collaborated with diverse brands and institutions: VinUniversity, VIVO Vietnam, Animow Animation Studio, Queenscliffe Historical Museum, and more.
-      </p>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <h2 class="sub-heading">CONTACT ME:</h2>
-      <div class="contact-grid">
-        <div class="contact-label">EMAIL:</div>
-        <div class="contact-value"><a href="mailto:krystina@krysfolio.com">krystina@krysfolio.com</a></div>
-
-        <div class="contact-label">LINKEDIN:</div>
-        <div class="contact-value"><a href="www.linkedin.com/in/krystinanguyen-visualdesigneranimator/" target="_blank">www.linkedin.com/in/krystinanguyen-visualdesigneranimator</a></div>
-
-        <div class="contact-label">PHONE:</div>
-        <div class="contact-value">+61 450 457 690</div>
-
-        <div class="contact-label">INSTAGRAM:</div>
-        <div class="contact-value"><a href="https://instagram.com/krys_folio" target="_blank">@krys_folio</a></div>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-circle">hi</span>
+        <span class="logo-text">KRYSFOLIO.COM</span>
       </div>
-    </section>
-
-    <div class="ticker-wrap">
-      <div class="ticker-item">PORTFOLIO</div>
-      <div class="ticker-item">PORTFOLIO</div>
-      <div class="ticker-item">PORTFOLIO</div>
+      <nav class="nav-links">
+        <a href="#work">WORK</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
     </div>
+  </header>
 
-    <article class="project-article">
-      <div class="project-header">
-        <h3 class="project-title">ALFRED DEAKIN ANIMATION PROJECT</h3>
-        <span class="project-date">NOV/2025 - MAY/2026</span>
-      </div>
-      <p class="project-description">
-        Created for the Queenscliffe Historical Museum, this educational animation brings local history to life for a younger audience. I was tasked with making historical content engaging for children, which comes with a unique design challenge: it had to be entirely silent to suit the museum's custom peephole installations. Storyboard written by Felicity Rousseaux.
-      </p>
-
-      <div class="media-block">
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/OgM4yxj-8_4?si=yf59N9xJAiLDhalK" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+  <main class="main-content">
+    <section class="hero-section">
+      <h2 class="sub-title">Visual Designer & Animator</h2>
+      
+      <div class="brand-container">
+        <div class="row row-top">KRYS’</div>
+        <div class="row row-bottom">
+          <span class="letter txt-green">F</span>
+          <div class="eye">
+            <div class="pupil"></div>
+          </div>
+          <span class="letter txt-green letter-l">L</span>
+          <div class="eye">
+            <div class="pupil"></div>
+          </div>
         </div>
       </div>
 
-      <div class="media-block">
-        <span class="media-caption">Alfred Deakin Character Design</span>
-        <div class="image-wrapper">
-          <img src="assets/char-sheet.jpeg"Alfred Deakin Character Design">
+      <div class="cta-buttons">
+        <a href="#work" class="btn">VIEW WORK</a>
+        <a href="#cv" class="btn">DOWNLOAD CV</a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h3 class="section-title">ABOUT</h3>
+      <div class="about-text">
+        <p>Hello,</p>
+        <p>I'm Krystina, a Visual Designer & Animator based in Melbourne, Australia. I am studying <span class="txt-highlight">Graphic Design & User Experience Design</span> at the University of Melbourne. Over the past three years, I've transformed clients' innovative ideas into visual experiences through <span class="txt-highlight">creative packaging</span> and <span class="txt-highlight">animation</span>. My work specialises in <span class="txt-highlight">3D packaging design and hand-drawn 2D animation</span>. I believe every detail should have a purpose.</p>
+        <p>I look forward to learning about your vision and exploring how we can bring it to life together!</p>
+      </div>
+    </section>
+
+    <section id="work" class="projects-section">
+      <h3 class="section-title">FEATURE PROJECTS</h3>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="card-header">
+            <span class="tag">#graphic_design</span>
+            <span class="year">2024</span>
+          </div>
+          <div class="card-media">
+            <img src="placeholder1.jpg" alt="Project 2024"> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="tag">#creative_packaging</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="card-media">
+            <img src="placeholder2.jpg" alt="Project 2026">
+          </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="media-block">
-        <span class="media-caption">Storyboard</span>
-        <div class="image-wrapper">
-          <img src="assets/storyboard-01.jpeg" alt="Storyboard Main">
-        </div>
-      </div>
-
-      <div class="storyboard-subgrid">
-        <div class="image-wrapper">
-          <img src="assets/storyboard-02.jpeg" alt="Storyboard Sketch 1">
-        </div>
-        <div class="image-wrapper">
-          <img src="assets/storyboard-03.jpeg" alt="Storyboard Sketch 2">
-        </div>
-      </div>
-    </article>
-
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
