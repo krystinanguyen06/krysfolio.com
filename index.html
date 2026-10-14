@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,78 +12,111 @@
 <body>
 
   <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <span class="logo-circle">hi</span>
-        <span class="logo-text">KRYSFOLIO.COM</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#work">WORK</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </div>
+    <a href="#top" class="logo"><span class="logo-dot">hi</span>krysfolio.com</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main class="main-content">
-    <section class="hero-section">
-      <h2 class="sub-title">Visual Designer & Animator</h2>
-      
-      <div class="brand-container">
-        <div class="row row-top">KRYS’</div>
-        <div class="row row-bottom">
-          <span class="letter txt-green">F</span>
-          <div class="eye">
-            <div class="pupil"></div>
-          </div>
-          <span class="letter txt-green letter-l">L</span>
-          <div class="eye">
-            <div class="pupil"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-buttons">
-        <a href="#work" class="btn">VIEW WORK</a>
-        <a href="#cv" class="btn">DOWNLOAD CV</a>
+  <main id="top">
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-label="Krystina's animation reel">
+        <source src="hero.webm" type="video/webm">
+        <source src="images/hero-animation.mp4" type="video/mp4">
+      </video>
+      <div class="cta">
+        <a href="#work" class="btn btn-solid">View work</a>
+        <a href="#cv" class="btn">Download CV</a>
       </div>
     </section>
 
-    <section id="about" class="about-section">
-      <h3 class="section-title">ABOUT</h3>
+    <section id="about" class="about">
+      <h2>About</h2>
       <div class="about-text">
-        <p>Hello,</p>
-        <p>I'm Krystina, a Visual Designer & Animator based in Melbourne, Australia. I am studying <span class="txt-highlight">Graphic Design & User Experience Design</span> at the University of Melbourne. Over the past three years, I've transformed clients' innovative ideas into visual experiences through <span class="txt-highlight">creative packaging</span> and <span class="txt-highlight">animation</span>. My work specialises in <span class="txt-highlight">3D packaging design and hand-drawn 2D animation</span>. I believe every detail should have a purpose.</p>
-        <p>I look forward to learning about your vision and exploring how we can bring it to life together!</p>
+        <p class="lead">Hello, I'm Krystina, a visual designer and animator based in Melbourne.</p>
+        <p>I'm studying <b>Graphic Design &amp; User Experience Design</b> at the University of Melbourne. Over the past three years, I've turned clients' ideas into visual experiences through <b>creative packaging</b> and <b>animation</b>. I specialise in <b>3D packaging design and hand-drawn 2D animation</b>, and I believe every detail should have a purpose.</p>
+        <p>I'd love to hear about your vision and work out how we can bring it to life together.</p>
       </div>
     </section>
 
-    <section id="work" class="projects-section">
-      <h3 class="section-title">FEATURE PROJECTS</h3>
-      
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-header">
-            <span class="tag">#graphic_design</span>
-            <span class="year">2024</span>
-          </div>
-          <div class="card-media">
-            <img src="placeholder1.jpg" alt="Project 2024"> 
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-header">
-            <span class="tag">#creative_packaging</span>
+    <section id="work" class="work">
+      <div class="category">
+        <h2>Storytelling</h2>
+        <div class="row">
+          <a href="#" class="card">
+            <div class="media"><img src="images/educational-animation-video.jpg" alt="Educational Animation Video" onerror="this.remove()"></div>
+            <h3 class="title">Educational Animation Video</h3>
+            
             <span class="year">2026</span>
-          </div>
-          <div class="card-media">
-            <img src="placeholder2.jpg" alt="Project 2026">
-          </div>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/architectural-storyboard.jpg" alt="Architectural Storyboard" onerror="this.remove()"></div>
+            <h3 class="title">Architectural Storyboard</h3>
+            
+            <span class="year">2025</span>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/brewbourne-moka-pot.jpg" alt="Brewbourne Moka Pot" onerror="this.remove()"></div>
+            <h3 class="title">Brewbourne Moka Pot</h3>
+            <p class="tags"><span>#3D_modelling</span><span>#illustration</span></p>
+            <span class="year">2025</span>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/brewbourne-mascots.jpg" alt="Brewbourne Mascots" onerror="this.remove()"></div>
+            <h3 class="title">Brewbourne Mascots</h3>
+            <p class="tags"><span>#illustration</span><span>#character_design</span></p>
+            <span class="year">2025</span>
+          </a>
+        </div>
+      </div>
+      <div class="category">
+        <h2>Skill: Graphic Design &amp; 3D Packaging</h2>
+        <div class="row">
+          <a href="#" class="card">
+            <div class="media"><img src="images/unimelb-fashion-society-logo-design.jpg" alt="UniMelb Fashion Society Logo Design" onerror="this.remove()"></div>
+            <h3 class="title">UniMelb Fashion Society Logo Design</h3>
+            
+            <span class="year">2026</span>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/normal-for-who-activist-campaign.jpg" alt="Normal For Who? Activist Campaign" onerror="this.remove()"></div>
+            <h3 class="title">Normal For Who? Activist Campaign</h3>
+            
+            <span class="year">2026</span>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/cham-restaurant-branding-design.jpg" alt="Cham Restaurant Branding Design" onerror="this.remove()"></div>
+            <h3 class="title">Cham Restaurant Branding Design</h3>
+            
+            <span class="year">2026</span>
+          </a>
+          <a href="#" class="card">
+            <div class="media"><img src="images/brewbourne-packaging.jpg" alt="Brewbourne Packaging" onerror="this.remove()"></div>
+            <h3 class="title">Brewbourne Packaging</h3>
+            <p class="tags"><span>#3D_packaging</span><span>#3D_modelling</span></p>
+            <span class="year">2026</span>
+          </a>
+        </div>
+      </div>
+      <div class="category">
+        <h2>Web Design</h2>
+        <div class="row">
+          <a href="#" class="card">
+            <div class="media"><img src="images/krysfolio-website.jpg" alt="Krysfolio Website" onerror="this.remove()"></div>
+            <h3 class="title">Krysfolio Website</h3>
+            <p class="tags"><span>#web_design</span></p>
+            <span class="year">2026</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer id="contact" class="footer">
+    <p>Let's make something together.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
