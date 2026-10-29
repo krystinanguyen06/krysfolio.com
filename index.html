@@ -1,123 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2B262C">
   <title>Krystina | Visual Designer & Animator</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="#top" class="logo"><span class="logo-dot">hi</span>krysfolio.com</a>
-    <nav class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <main class="pitch-page">
+    <video
+      id="pitchVideo"
+      class="pitch-video"
+      playsinline
+      preload="none"
+      poster="hero-poster.jpg"
+      aria-label="Krystina's pitching video"
+    >
+      <source src="images/hero-animation.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
 
-  <main id="top">
-    <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-label="Krystina's animation reel">
-        <source src="hero.webm" type="video/webm">
-        <source src="images/hero-animation.mp4" type="video/mp4">
-      </video>
-      <div class="cta">
-        <a href="#work" class="btn btn-solid">View work</a>
-        <a href="#cv" class="btn">Download CV</a>
-      </div>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="KRYSFOLIO home">
+        <span class="logo-circle">hi</span>
+        <span class="brand-name">KRYSFOLIO.COM</span>
+      </a>
+
+      <a class="contact-link" href="contact.html">
+        CONTACT <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <div class="video-overlay" id="videoOverlay">
+      <button class="play-button" id="playButton" type="button">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span>WATCH MY PITCH</span>
+      </button>
+    </div>
+
+    <section class="video-controls" id="videoControls"
+             aria-label="Video controls" hidden>
+      <button class="control-button" id="pauseButton" type="button"
+              aria-label="Pause video">Ⅱ</button>
+
+      <span class="time-display" id="currentTime">0:00</span>
+
+      <input
+        class="timeline"
+        id="timeline"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+        aria-label="Seek through video"
+      >
+
+      <span class="time-display" id="duration">0:00</span>
+
+      <button class="control-button sound-button" id="soundButton"
+              type="button" aria-label="Mute video">SOUND ON</button>
     </section>
 
-    <section id="about" class="about">
-      <h2>About</h2>
-      <div class="about-text">
-        <p class="lead">Hello, I'm Krystina, a visual designer and animator based in Melbourne.</p>
-        <p>I'm studying <b>Graphic Design &amp; User Experience Design</b> at the University of Melbourne. Over the past three years, I've turned clients' ideas into visual experiences through <b>creative packaging</b> and <b>animation</b>. I specialise in <b>3D packaging design and hand-drawn 2D animation</b>, and I believe every detail should have a purpose.</p>
-        <p>I'd love to hear about your vision and work out how we can bring it to life together.</p>
-      </div>
-    </section>
-
-    <section id="work" class="work">
-      <div class="category">
-        <h2>Storytelling</h2>
-        <div class="row">
-          <a href="#" class="card">
-            <div class="media"><img src="images/educational-animation-video.jpg" alt="Educational Animation Video" onerror="this.remove()"></div>
-            <h3 class="title">Educational Animation Video</h3>
-            
-            <span class="year">2026</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/architectural-storyboard.jpg" alt="Architectural Storyboard" onerror="this.remove()"></div>
-            <h3 class="title">Architectural Storyboard</h3>
-            
-            <span class="year">2025</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/brewbourne-moka-pot.jpg" alt="Brewbourne Moka Pot" onerror="this.remove()"></div>
-            <h3 class="title">Brewbourne Moka Pot</h3>
-            <p class="tags"><span>#3D_modelling</span><span>#illustration</span></p>
-            <span class="year">2025</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/brewbourne-mascots.jpg" alt="Brewbourne Mascots" onerror="this.remove()"></div>
-            <h3 class="title">Brewbourne Mascots</h3>
-            <p class="tags"><span>#illustration</span><span>#character_design</span></p>
-            <span class="year">2025</span>
-          </a>
-        </div>
-      </div>
-      <div class="category">
-        <h2>Skill: Graphic Design &amp; 3D Packaging</h2>
-        <div class="row">
-          <a href="#" class="card">
-            <div class="media"><img src="images/unimelb-fashion-society-logo-design.jpg" alt="UniMelb Fashion Society Logo Design" onerror="this.remove()"></div>
-            <h3 class="title">UniMelb Fashion Society Logo Design</h3>
-            
-            <span class="year">2026</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/normal-for-who-activist-campaign.jpg" alt="Normal For Who? Activist Campaign" onerror="this.remove()"></div>
-            <h3 class="title">Normal For Who? Activist Campaign</h3>
-            
-            <span class="year">2026</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/cham-restaurant-branding-design.jpg" alt="Cham Restaurant Branding Design" onerror="this.remove()"></div>
-            <h3 class="title">Cham Restaurant Branding Design</h3>
-            
-            <span class="year">2026</span>
-          </a>
-          <a href="#" class="card">
-            <div class="media"><img src="images/brewbourne-packaging.jpg" alt="Brewbourne Packaging" onerror="this.remove()"></div>
-            <h3 class="title">Brewbourne Packaging</h3>
-            <p class="tags"><span>#3D_packaging</span><span>#3D_modelling</span></p>
-            <span class="year">2026</span>
-          </a>
-        </div>
-      </div>
-      <div class="category">
-        <h2>Web Design</h2>
-        <div class="row">
-          <a href="#" class="card">
-            <div class="media"><img src="images/krysfolio-website.jpg" alt="Krysfolio Website" onerror="this.remove()"></div>
-            <h3 class="title">Krysfolio Website</h3>
-            <p class="tags"><span>#web_design</span></p>
-            <span class="year">2026</span>
-          </a>
-        </div>
-      </div>
-    </section>
+    <p class="video-error" id="videoError" role="alert" hidden>
+      Unable to play the video. Please try again.
+    </p>
   </main>
 
-  <footer id="contact" class="footer">
-    <p>Let's make something together.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
