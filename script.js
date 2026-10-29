@@ -112,10 +112,14 @@ video.addEventListener("ended", () => {
   overlay.hidden = false;
   controls.hidden = true;
 
-  playButton.innerHTML =
-    '<span class="play-icon" aria-hidden="true">↻</span>' +
-    "<span>WATCH AGAIN</span>";
+  video.addEventListener("ended", () => {
+  video.currentTime = 0;
+  overlay.hidden = false;
+  controls.hidden = true;
 
+  timeline.value = 0;
+  currentTimeDisplay.textContent = "0:00";
+});
   timeline.value = 0;
   currentTimeDisplay.textContent = "0:00";
 });
@@ -125,11 +129,14 @@ video.addEventListener("error", () => {
     "Video could not be loaded. Check the video file path.";
   errorMessage.hidden = false;
 });
-
-video.addEventListener("click", () => {
-  if (!video.paused) {
-    video.pause();
+video.addEventListener("click", async () => {
+  if (video.paused) {
+    try {
+      await video.play();
+    } catch (error) {
+      console.error("Video playback failed:", error);
+    }
   } else {
-    video.play();
+    video.pause();
   }
 });
