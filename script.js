@@ -125,3 +125,11 @@ video.addEventListener("error", () => {
     "Video could not be loaded. Check the video file path.";
   errorMessage.hidden = false;
 });
+
+video.addEventListener("click", () => {
+  if (!video.paused) {
+    video.pause();
+  } else {
+    video.play();
+  }
+});
